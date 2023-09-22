@@ -1,0 +1,279 @@
+.post-meta-info
+    z-index: 9
+    margin-bottom: 30px
+    .cats
+        margin-bottom: 20px
+        a
+            font-size: 18px
+            &:after
+                content: ","
+            &:last-child
+                &:after
+                    display: none
+    .title
+        margin-bottom: 10px
+        h2
+            font-weight: 600
+            font-size: 30px
+            line-height: 1.48
+            +mobileXs
+                font-size: 30px
+    .meta
+        margin-bottom: 40px
+        li
+            margin-right: 36px
+            position: relative
+            color: #505050
+            font-size: 14px
+            display: inline-block
+            list-style: none
+            +mobileXs
+                line-height: 2.5
+            &:after
+                content: ""
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                left: 100%
+                height: 4px
+                width: 4px
+                background-color: #505050
+                border-radius: 50%
+                margin-left: 16px
+            &:last-child
+                margin-right: 0px
+                &:after
+                    display: none
+            a
+                font-size: 14px
+            &.meta-author
+                img
+                    border-radius: 50%
+                    height: 30px
+                    width: 30px
+                    margin-right: 6px
+    .btn
+        margin-top: 30px
+
+.post-details-cover
+    .post-thumb-cover
+        .post-thumb
+            margin-bottom: 40px
+            iframe
+                width: 100%
+                height: 500px
+                +tab
+                    height: 250px
+    .post-content-cover
+        p
+            margin-bottom: 20px
+            line-height: 1.66
+        .post-my-gallery-images
+            padding-top: 20px
+            h3
+                margin-bottom: 30px
+                font-weight: 600
+            img,
+            iframe,
+            video,
+            audio
+                margin-bottom: 30px
+        iframe
+            height: 505px
+            width: 100%
+            +medium
+                height: 250px
+        &.my-drop-cap
+            > p
+                &:first-child:first-letter
+                    font-size: 52px
+                    float: left
+                    line-height: 40px
+                    font-weight: 600
+                    padding-right: 10px
+                    margin-top: 5px
+    .post-all-tags
+        margin-top: 40px
+        padding-bottom: 30px
+        a
+            display: inline-block
+            padding: 6px 10px
+            background-color: #f9f9f9
+            margin-right: 2px
+            margin-bottom: 6px
+            font-size: 13px
+            &:hover 
+                color: #fff
+                background-color: #222
+    .post-about-author-box
+        display: flex
+        padding: 40px
+        background-color: #f9f9f9
+        margin: 30px 0px
+        margin-bottom: 60px
+        +mobileSm
+            flex-wrap: wrap
+        .author-avatar
+            flex: 0 0 130px
+            width: 130px
+            +mobileSm
+                flex: 0 0 120px
+                max-width: 120px
+                margin: 0 auto
+                margin-bottom: 20px
+        .author-desc
+            margin-left: 30px
+            +mobileSm
+                margin-left: 0
+                h5 a,
+                .description,
+                .social-icons
+                    text-align: center
+            h5
+                a
+                    font-weight: 600
+                    font-size: 17px
+                    margin-bottom: 16px
+                    display: block
+            .description
+                font-size: 14px
+                color: #505050
+                margin-bottom: 16px
+            .social-icons
+                a
+                    margin-right: 5px
+                    font-size: 14px
+    .comment-title
+        h3
+            margin-bottom: 20px
+    .post-all-comments
+        padding: 40px
+        margin-bottom: 30px
+        background-color: #f9f9f9
+        list-style-type: none
+        margin: 0
+        margin-bottom: 35px
+        +mobileLg
+            padding: 20px
+        .single-comment-wrapper
+            margin-bottom: 30px
+            border-bottom: 1px solid #f3f3f3
+            &:last-child
+                margin-bottom: 0
+                border: 0px
+                .single-post-comment
+                    &:last-child
+                        margin-bottom: 0
+            .single-post-comment
+                margin-bottom: 30px
+                display: flex
+                flex-wrap: wrap
+                &:hover
+                    .comment-content
+                        .reply-btn
+                            @extend .yellow
+                .comment-author-image
+                    width: 120px
+                    +tab
+                        width: 40px
+                .comment-content
+                    width: calc(100% - 120px)
+                    +tab
+                        width: calc(100% - 40px)
+                        padding-left: 20px
+                    .comment-author-name
+                        margin-bottom: 8px
+                        h6
+                            font-size: 16px
+                            font-weight: 600
+                            display: inline-block
+                            margin-right: 12px
+                        span
+                            font-size: 12px
+                            font-weight: 400
+                            color: #505050
+                            +mobileSm
+                                display: block
+                    p
+                        font-size: 14px
+                        line-height: 1.7
+                        +tab
+                            font-size: 13px
+                    .reply-btn
+                        margin-top: 7.5px
+                        font-size: 12px
+                        display: inline-block
+                        font-weight: 500
+            .children
+                list-style: none
+                margin: 0
+                padding: 0
+                margin-left: 120px
+                +tab
+                    margin-left: 60px
+                +mobileLg
+                    margin-left: 30px
+                +mobileSm
+                    margin-left: 15px
+                .single-comment-wrapper
+                    padding-top: 30px
+                    padding-bottom: 30px
+                    border-top: 1px solid #f3f3f3
+                    border-bottom: 0px
+.post-comment-form-cover
+    padding: 30px 0px 0px 0px
+    h3
+        font-weight: 600
+        margin-bottom: 30px
+        text-transform: capitalize
+    form
+        .btn-primary
+            font-size: 22px
+            font-weight: 500
+            margin-top: 10px
+            margin-bottom: -8px
+            &:before
+                bottom: 8px
+        .form-control
+            +mobileMd
+                margin-bottom: 20px
+// Blockquote
+blockquote
+    padding: 40px
+    background-color: #f9f9f9
+    border-left: 2px solid #222
+    position: relative
+    z-index: auto
+    &:before
+        content: "“"
+        position: absolute
+        top: -15px
+        left: 25px
+        font-size: 150px
+        color: #505050
+        z-index: 1
+        opacity: .1
+    p
+        line-height: 1.3
+        font-style: italic
+        font-size: 22px
+        margin-bottom: 10px
+        z-index: 9
+    cite
+        font-size: 16px
+        font-style: normal
+        color: #505050
+        
+// Blog Comment
+.comment-form
+    .form-control
+        margin-bottom: 30px
+        height: 50px
+        padding: 0px 20px
+    textarea
+        &.form-control
+            height: 160px
+            padding: 20px 20px
+    .more-btn
+        padding-left: 0
+

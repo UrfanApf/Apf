@@ -1,0 +1,104 @@
+// Complete Off Canvas
+.off-canvas
+    width: 470px
+    background-color: #222222
+    padding: 50px 50px 0px 120px
+    position: fixed
+    top: 0
+    left: 0
+    height: auto
+    z-index: 999
+    height: 100vh
+    overflow-y: auto
+    @extend .trans-4
+    opacity: 0
+    visibility: hidden
+    &.show 
+        visibility: visible
+        opacity: 1
+    .widget
+        @extend .mb-60
+        &:last-child
+            margin-bottom: 50px
+        .widget-title
+            margin-bottom: 27px
+            margin-top: -7px
+        .widget-content
+            .gallery-image-list
+                @extend .d-flex
+                margin-bottom: -10px
+                margin-right: -10px
+                li
+                    flex-basis: 60px
+                    margin-right: 10px
+                    margin-bottom: 10px
+                    overflow: hidden
+                    img
+                        @extend .trans-4
+                        margin-bottom: 0
+                    &:hover
+                        img
+                            transform: scale(1.1)
+            ul li a, ul li, p
+                @extend .fz-18
+            p
+                line-height: 2
+        &.social-widget
+            ul
+                margin-top: -12px
+                li
+                    display: inline-block
+                    padding: 0px 14px
+                    margin-right: -4px
+                    &:first-child
+                        padding-left: 0px
+                    a i
+                        &:hover
+                            @extend .yellow
+                            @extend .trans-3
+        &.info-widget
+            .widget-content
+                ul
+                    margin-top: -6px
+
+// Off Canvas Buttons
+.offcanvas-close
+    @extend .posabs
+    top: 60px
+    left: 50px
+    height: 21px
+    min-width: 24px
+    cursor: pointer
+    padding-top: 9px
+    margin-top: -9px
+    .bar
+        height: 2px
+        display: block
+        border-radius: 5px
+        @extend .bg-white
+        &.one
+            transform: rotate(45deg)
+        &.two
+            margin-top: -2px
+            transform: rotate(-45deg)
+.offcanvas-btn
+    @extend .posabs
+    top: 50%
+    transform: translateY(-50%)
+    left: 43px
+    height: 20px
+    width: 40px
+    cursor: pointer
+    z-index: 99
+    +ml
+        display: none
+    .bar
+        height: 2px
+        width: 30px
+        @extend .bg-white
+        display: block
+        margin-bottom: 6px
+        &:last-child
+            margin-bottom: 0px
+        &.two
+            margin-left: 6px

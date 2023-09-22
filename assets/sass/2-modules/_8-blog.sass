@@ -1,0 +1,93 @@
+.blog-card
+    margin-bottom: -7px
+    margin-bottom: 50px
+    display: inline-block
+    +tab
+        max-width: 355px
+    &:hover
+        .thumb
+            border-color: #ffb901
+    .thumb
+        border: 4px solid #d6d6d6
+        padding: 30px 95px 30px 0px
+        width: calc(100% - 30px)
+        margin-left: auto
+        margin-bottom: 75px
+        @extend .posrel
+        a img
+            margin-left: -30px
+            margin-bottom: -60px
+        .date
+            @extend .d-flex
+            @extend .align-items-center
+            @extend .justify-content-center
+            @extend .posabs
+            @extend .bold
+            text-align: center
+            top: 0
+            right: 0
+            width: 125px
+            height: 100%
+            font-size: 16px
+            line-height: 1
+            span
+                display: block
+                font-size: 55px
+                margin-bottom: 2px
+                @extend .bold
+                @extend .open-sans
+    .blog-info
+        h3
+            margin-bottom: 10px
+        p
+            margin-bottom: 30px
+
+.blog-item
+    background-color: #fff
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1)
+    margin-bottom: 50px
+    &:hover
+        .post-thumb
+            img
+                transform: scale(1.2)
+    .post-thumb
+        overflow: hidden
+        display: block
+        img
+            transition: 1.5s ease
+
+.blog-info
+    &.p-round
+        padding: 37px 30px 30px 30px
+    .blog-meta
+        margin-bottom: 15px
+        .list-inline
+            li
+                display: inline-block
+                margin-right: 30px
+                font-size: 14px
+                color: #505050
+                a
+                    font-size: 14px
+                    margin-right: 5px
+                    &:after
+                        content: ","
+                        color: green
+                    &:last-child
+                        &:after
+                            display: none
+
+.pagination
+    span, a
+        height: 40px
+        width: 40px
+        line-height: 40px
+        text-align: center
+        border: 1px solid #ccc
+        display: inline-block
+        transition: .3s
+        cursor: pointer
+        &:hover
+            border-color: transparent
+            @extend .bg-black
+            color: #ffffff

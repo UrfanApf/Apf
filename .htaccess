@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^haqqimizda$ /about.html [L]
+RewriteRule ^qida$ /project-details-chorek.html [L]
+RewriteRule ^agro$ /service-details.html [L]
+RewriteRule ^insaat$ /project-details.html [L]
+RewriteRule ^elaqe$ /contact.html [L]

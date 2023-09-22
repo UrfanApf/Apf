@@ -1,0 +1,44 @@
+.service-item
+    padding: 55px 35px
+    border: 4px solid #cfcfcf
+    width: calc(100% - 30px)
+    margin-bottom: 80px
+    @extend .trans-4
+    @extend .posrel
+    +mobileMd
+        padding: 35px 25px
+    h3
+        margin-top: -5px
+        margin-bottom: 13px // 14px + 13px
+        a
+            @extend .trans-4
+    p
+        height: 210px
+        overflow: hidden
+    .icon
+        height: 140px
+        width: 160px
+        @extend .d-flex
+        @extend .align-items-center
+        @extend .justify-content-center
+        @extend .posabs
+        @extend .bg-yellow
+        bottom: -34px
+        right: -34px
+        +mobileMd
+            height: 100px
+            width: 120px
+        svg
+            +mobileMd
+                height: 45px
+                width: 45px
+            path
+                stroke-width: 0px
+                fill: #222
+                transition: .4s
+    &:hover
+        @extend .br-yellow
+        h3 a
+            @extend .yellow
+        .icon svg path
+            fill: #ffffff

@@ -1,0 +1,198 @@
+[data-sticky="true"] 
+    position: fixed
+    top: 0
+    width: 100%
+    z-index: 9999
+
+
+.site-main-menu
+    @extend .posrel
+    z-index: 99
+    @extend .trans-5
+    &.is-sticky
+        @extend .bg-white
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.1)
+        .nav-menu
+            .default-logo
+                display: none
+            .sticky-logo
+                display: block
+            .menu-toggle-button
+                span.bar
+                    background-color: #222222
+            .nav-menu-list
+                > li > a
+                    color: #222
+                    +tab
+                        color: #ffffff
+                        padding: 10px 25px
+                > .dropdown-btn
+                    &:before
+                        color: #222
+                li
+                    &.current-menu-item
+                        > a
+                            @extend .yellow
+                        &.dropdown-btn
+                            &:before
+                                @extend .yellow
+                        > span
+                            @extend .yellow
+
+        .offcanvas-btn
+            .bar
+                background-color: #222222
+    .nav-menu
+        +tab
+            height: 80px
+            display: flex
+            align-items: center
+        .default-logo
+            display: block
+        .sticky-logo
+            display: none
+        ul li
+            list-style: none
+            display: block
+            margin-left: -4px
+            +tab
+                margin-left: 0
+            &:hover
+                > a
+                    @extend .yellow
+            a
+                color: #ffffff
+                display: block
+                @extend .fz-18
+                @extend .semi-bold
+                &:hover
+                    @extend .yellow
+        .nav-menu-list
+            +tab
+                display: none
+                position: absolute
+                top: 100%
+                left: 0
+                width: 100%
+                overflow-y: auto
+                max-height: 400px
+                background: #222222
+            li
+                &:last-child
+                    a
+                        padding-right: 0
+                &.current-menu-item
+                    > a
+                        @extend .yellow
+                    &.dropdown-btn
+                        &:before
+                            @extend .yellow
+                    > span
+                        @extend .yellow
+                span
+                    display: none
+                    @extend .posabs
+                    top: 0
+                    right: 0
+                    height: 41px
+                    line-height: 41px
+                    text-align: center
+                    width: 40px
+                    background-color: #555
+                    cursor: pointer
+                    +tab
+                        display: block
+                a
+                    padding: 40px 28px
+                    @extend .trans-4
+                    +tab
+                        display: block
+                        background-color: #222
+                        padding: 10px 25px
+                        font-size: 14px
+                        min-height: 40px
+            .dropdown-btn
+                @extend .posrel
+                @extend .white
+                +tab
+                    z-index: 999
+                &:before
+                    content: "\f107"
+                    @extend .posabs
+                    right: 23px
+                    top: 50%
+                    transform: translateY(-50%)
+                    font-family: FontAwesome
+                    @extend .trans-4
+                    +tab
+                        display: none
+                &:hover
+                    > .dropdown-list
+                        visibility: visible
+                        opacity: 1
+                        @extend .trans-4
+                    &:before
+                        transform: translateY(-50%) rotate(-90deg)
+                        @extend .yellow
+                    > span
+                        @extend .yellow
+                .dropdown-list
+                    @extend .posabs
+                    width: 200px
+                    top: 0
+                    left: 100%
+                    background-color: #222
+                    padding: 10px 0px
+                    visibility: hidden
+                    opacity: 0
+                    +tab
+                        position: static
+                        width: 100%
+                        display: none
+                        left: auto
+                        height: 100%
+                        width: 100%
+                        z-index: 99
+                        padding: 0px
+                        padding-left: 25px
+                        &.show
+                            display: block
+                            opacity: 1
+                            visibility: visible
+                    li a
+                        padding: 10px 25px
+                        font-size: 16px
+                        +tab
+                            font-size: 14px
+            > li
+                display: inline-block
+                +tab
+                    display: block
+                    border-bottom: 1px solid #333
+                    &:first-child
+                        border-top: 1px solid #333333
+                a
+                    @extend .white
+                &.dropdown-btn
+                    &:hover
+                        > .dropdown-list
+                            margin-top: 0px
+                            @extend .trans-4
+                        &:before
+                            transform: translateY(-50%) rotate(0deg)
+                    &:before
+                        right: 0
+                    > .dropdown-list
+                        top: 100%
+                        left: 0
+.menu-toggle-button
+    display: none
+    cursor: pointer
+    span.bar
+        height: 2px
+        width: 30px
+        @extend .bg-white
+        display: block
+        margin-bottom: 6px
+    +tab    
+        display: block

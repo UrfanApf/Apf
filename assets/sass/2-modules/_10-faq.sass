@@ -1,0 +1,71 @@
+[data-tab]
+    display: none
+    &.active
+        display: block
+
+.faq-tab-btn
+    border: 4px solid #d6d6d6
+    padding: 44px 30px
+    margin-bottom: 40px
+    ul
+        @extend .posrel
+        list-style-type: none
+        margin: 0
+        padding: 0
+        li
+            @extend .josefin
+            cursor: pointer
+            @extend .semi-bold
+            &:not(:last-child)
+                margin-bottom: 25px
+            &:before
+                content: "\f24d"
+                font-family: FontAwesome
+                margin-right: 20px
+                font-size: 14px
+            &:hover, &.active
+                @extend .yellow
+.faq-tab-content
+    +tab
+        margin-top: 50px
+    
+.faq-widget
+    p
+        margin-bottom: 11px
+
+.accordion
+    .accordionItem
+        &:first-child
+            h3
+                padding-top: 0
+        &.active
+            &:last-child
+                h3
+                    border-bottom: 1px solid #d2d2d2
+                    margin-bottom: 0
+            h3
+                &:before
+                    content: "\f147"
+        h3
+            @extend .semi-bold
+            border-bottom: 1px solid #d2d2d2
+            padding-bottom: 10px
+            padding-top: 10px
+            padding-left: 42px
+            font-size: 18px
+            cursor: pointer
+            position: relative
+            &:before
+                content: "\f196"
+                font-family: FontAwesome
+                position: absolute
+                left: 10px
+                font-size: 20px
+                margin-top: -3px
+        .accordion-content
+            padding-left: 42px
+            padding-top: 12.5px
+            padding-bottom: 20px
+            color: #4b4b4b
+            border-bottom: 1px solid #d2d2d2
+            font-size: 16px

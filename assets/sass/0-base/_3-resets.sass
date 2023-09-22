@@ -1,0 +1,128 @@
+*
+    outline: none !important
+
+ol, ul, p
+    margin: 0
+    padding: 0
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+    -webkit-appearance: none
+    appearance: none
+    margin: 0
+
+input[type="number"]
+    -moz-appearance: textfield
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active 
+    transition: background-color 5000s ease-in-out 0s
+
+::selection 
+    text-shadow: none
+    color: #fff
+    background: #222
+
+::placeholder
+    color: #aaa7a7 !important
+    opacity: 1 !important
+
+iframe
+    max-width: 100%
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus
+    outline: none !important
+    box-shadow: none
+
+button,
+button[type="submit"],
+input[type="submit"]
+    border: none
+    background: transparent
+    cursor: pointer
+    -webkit-appearance: button
+    -moz-appearance: button
+    appearance: button
+
+textarea
+    resize: none
+
+img
+    max-width: 100%
+    height: auto
+
+a 
+    color: #222222
+    +transition(0.2s, ease)
+
+a:hover,
+a:active,
+a:focus
+    @extend .yellow
+    text-decoration: none
+    outline: none !important
+    +transition(0.2s, ease)
+
+input,
+input:hover,
+input:focus,
+input:active,
+select,
+textarea
+    text-decoration: none
+    outline: none !important
+    border: 0px
+    box-shadow: none
+    border-radius: 0px
+    border-bottom: 1px solid #0f0f0f
+    padding: 0
+    color: #222
+    width: 100%
+    height: 60px
+    @extend .posrel
+    margin-top: 30px
+    padding: 0 20px
+
+textarea
+    height: 90px
+
+h1, h2, h3, h4, h5, h6, p 
+    margin-bottom: 0
+    padding: 0
+
+h1, h2, h3, h4, h5, h6
+    color: #222
+    @extend .josefin
+
+p 
+    color: #333
+    @extend .open-sans
+    @extend .fz-18
+    line-height: 1.625
+    color: #626262
+    &:not(:last-child)
+        margin-bottom: 20px
+
+h1
+    font-size: 48px
+h2
+    font-size: 30px
+h3
+    font-size: 24px
+h4
+    font-size: 18px
+h5
+    font-size: 16px
+h6
+    font-size: 14px
+
+body
+    overflow-x: hidden !important
+    @extend .open-sans
+    @extend .fz-18
+    

@@ -1,0 +1,78 @@
+.about-text-container
+    .about-text
+        p
+            margin-bottom: 32px
+.about-counter
+    min-height: 580px
+    @extend .posrel
+    +tab
+        margin-top: 50px
+    +mobileSm
+        min-height: 330px
+    .counter, .counter-img
+        height: 225px
+        width: 225px
+        text-align: center
+        align-items: center
+        @extend .posabs
+        @extend .d-flex
+        +tab
+            height: 250px
+            width: 250px
+        +mobileLg
+            height: 225px
+            width: 225px
+        +mobileSm
+            height: 120px
+            width: 120px
+        &.small
+            height: 225px
+            width: 180px
+            +mobileSm
+                height: 100px
+                width: 100px
+        h2
+            font-size: 70px
+            line-height: 1
+            +mobileSm
+                font-size: 36px
+        span
+            font-size: 20px
+            @extend .josefin
+            +mobileSm
+                font-size: 12px
+        *
+            flex-basis: 100%
+            width: 100%
+
+.about-video
+    position: relative
+    margin-right: 30px
+    margin-bottom: 30px
+    display: inline-block
+    +tab
+        margin-top: 50px
+    .icon
+        position: absolute
+        bottom: -30px
+        right: -30px
+        height: 130px
+        width: 160px
+        @extend .bg-yellow
+        display: flex
+        align-items: center
+        justify-content: center
+        &:hover
+            .svg
+                path
+                    fill: #ffffff
+        +mobileSm
+            height: 100px
+            width: 120px
+        .svg
+            +mobileSm
+                height: 40px
+                width: 40px
+            path
+                stroke-width: 0px
+                fill: #222

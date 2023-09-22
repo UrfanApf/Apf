@@ -1,0 +1,152 @@
+.banner-area
+    @extend .posrel
+    min-height: 100vh
+    .banner-options
+        display: inline-block
+        transform: rotate(-90deg) translateX(50%)
+        @extend .posabs
+        bottom: 39px // 11px + 39px
+        left: 16px // 37px + 16px
+        @extend .josefin
+        font-size: 14px
+        z-index: 10
+        +ml
+            display: none
+        a
+            @extend .white
+        svg
+            margin-right: 10px
+            margin-top: -5px
+        .go-down
+            @extend .white
+
+    .banner-slider
+            @extend .posabs
+            top: 0
+            left: 0
+            height: 100%
+            width: 125px
+            background-color: #222
+            z-index: 9
+            +ml
+                display: none
+        .slider-item
+            min-height: 100vh
+            background-position: center
+            background-size: cover
+            background-repeat: no-repeat
+            padding-bottom: 50px
+            &:before
+                content: ""
+                @extend .posabs
+                top: 0
+                left: 0
+                height: 100%
+                width: 100%
+                background-color: #222222
+                opacity: 0.2
+            .slider-data
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                padding-top: 107px
+                h1
+                    font-size: 60px
+                    line-height: 1.33
+                    @extend .semi-bold
+                    @extend .white
+                    margin-bottom: 25px
+                    position: relative
+                    +ml
+                        font-size: 48px
+                    +tab
+                        font-size: 40px
+
+.banner-social
+    @extend .posabs
+    top: 50%
+    transform: translateY(-50%)
+    right: 50px
+    z-index: 9
+    +ml
+        display: none
+    ul li
+        list-style: none
+        line-height: 1
+        a
+            @extend .white
+            @extend .posrel
+            i
+                height: 50px
+                width: 40px
+                line-height: 50px
+                text-align: center
+                @extend .trans-4
+            span
+                opacity: 0
+                visibility: hidden
+                @extend .trans-4
+                @extend .posabs
+                right: 100%
+                top: 50%
+                transform: translateY(-50%)
+                @extend .josefin
+        a
+            &:hover
+                span
+                    opacity: 1
+                    visibility: visible
+                i
+                    transform: scale(1.875)
+                    @extend .yellow
+
+.page-title
+    padding-top: 315px
+    padding-bottom: 165px
+    min-height: auto
+    @extend .posrel
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    +mobileMd
+        padding-top: 150px
+        padding-bottom: 75px
+    &:before
+        @extend .posabs
+        content: "karim"
+        top: 0
+        left: 0
+        height: 100%
+        width: 125px
+        background-color: #222
+        z-index: 9
+        +ml
+            display: none
+    .page-title-wrapper
+        h1
+            @extend .white
+            +mobileMd
+                font-size: 36px
+        ul
+            margin: 0
+            padding: 0
+            list-style: none
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-end
+            li:not(:last-child)
+                margin-right: 45px
+                @extend .posrel
+                &:after
+                    content: ""
+                    @extend .posabs
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: calc(100% + 13px)
+                    height: 2px
+                    width: 20px
+                    background-color: #fff
+            li
+                @extend .yellow
+                a
+                    @extend .white

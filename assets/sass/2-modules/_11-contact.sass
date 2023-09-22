@@ -1,0 +1,58 @@
+.contact-info-item 
+    @extend .posrel
+    padding-left: 100px
+    display: flex
+    align-items: center
+    min-height: 160px
+    border: 4px solid #c5c5c5
+    margin-left: 30px
+    margin-bottom: 30px
+    +mobileMd
+        width: calc(100% - 70px)
+    +mobileSm
+        margin-left: 0
+        padding-left: 0
+        margin-top: 30px
+        padding-top: 85px
+        width: calc(100%)
+    .icon
+        @extend .posabs
+        top: 30px
+        left: -34px
+        width: 100px
+        height: 100px
+        @extend .bg-yellow
+        display: flex
+        align-items: center
+        justify-content: center
+        +mobileSm
+            top: -34px
+            left: 50%
+            transform: translateX(-50%)
+        svg path
+            stroke-width: 0px
+            fill: #222
+    .text
+        line-height: 1.66
+        +mobileMd
+            text-align: center
+            width: 100%
+            padding-bottom: 20px
+        ul
+            margin: 0
+            padding: 0
+            list-style: none
+.contact-form
+    margin-bottom: 76px
+    .more-btn
+        @extend .bold
+        font-size: 20px
+        margin-top: 35px
+    .form-response
+        span
+            display: block
+            @extend .text-center
+            background-color: #555
+            @extend .white
+            margin-top: 20px
+            padding: 15px 25px

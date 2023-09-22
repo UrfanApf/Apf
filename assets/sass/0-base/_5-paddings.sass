@@ -1,0 +1,19 @@
+$p-list: 165, 120, 90, 80, 70, 60
+$tab: 40
+
+// Padding Top
+@each $padding in $p-list
+    .pt-#{$padding} 
+        padding-top: $padding + px
+        @include tab
+            padding-top: ($padding - $tab) + px
+
+// Padding Bottom
+@each $padding in $p-list
+    .pb-#{$padding} 
+        padding-bottom: $padding + px
+        @include tab
+            padding-bottom: ($padding - $tab) + px
+
+.pr-55
+    padding-right: 55px

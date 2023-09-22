@@ -1,0 +1,96 @@
+.base-btn
+    display: inline-block
+    padding: 21px 50px
+    margin-top: 15px
+    @extend .bg-yellow
+    @extend .semi-bold
+    @extend .posrel
+    @extend .trans-4
+    +tab
+        padding: 15px 35px
+    &:hover
+        background-color: #f1f1f1
+        color: #222222
+        &:before
+            width: 100%
+            transition: .3s
+        &:after
+            height: 100%
+            transition: .4s
+            transition-delay: .2s
+        span
+            &:before
+                width: 100%
+                transition: .6s
+                transition-delay: .45s
+            &:after
+                height: 100%
+                transition: .8s
+                transition-delay: 1s
+    &:before, &:after
+        content: ""
+        position: absolute
+        @extend .bg-yellow
+    &:before
+        top: 0
+        left: 0
+        height: 2px
+        width: 0
+        transition: .8s
+        transition-delay: 1s
+    &:after
+        top: 0
+        right: 0
+        height: 0
+        width: 2px
+        transition: .6s
+        transition-delay: .5s
+    span
+        display: block
+        @extend .posabs
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        &:before, &:after
+            content: ""
+            position: absolute
+            @extend .bg-yellow
+        &:before
+            bottom: 0
+            right: 0
+            height: 2px
+            width: 0
+            transition: .4s
+            transition-delay: .2s
+        &:after
+            bottom: 0
+            left: 0
+            height: 0
+            width: 2px
+            transition: .3s
+        
+
+
+.more-btn
+    display: inline-block
+    @extend .posrel
+    color: #4b4b4b
+    font-size: 16px
+    @extend .semi-bold
+    @extend .trans-4
+    &:after
+        content: ""
+        @extend .posabs
+        top: 50%
+        transform: translateY(-50%)
+        left: calc(100% + 10px)
+        height: 2px
+        width: 30px
+        background-color: #4b4b4b
+        @extend .trans-4
+    &:hover
+        color: #4b4b4b
+        &:after
+            @extend .bg-yellow
+            left: calc(100% + 15px)

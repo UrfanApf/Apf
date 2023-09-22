@@ -1,0 +1,112 @@
+.widget
+    margin-bottom: 40px
+    .widget-title
+        &.text-white
+            h3
+                @extend .white
+        margin-bottom: 20px
+        h3
+            font-size: 24px
+            color: #4b4b4b
+    .widget-content
+        &.text-white
+            a, p, ul li 
+                @extend .text-light
+        a, p
+            color: #626262
+        a:hover
+            @extend .yellow
+        ul li
+            list-style: none
+            color: black
+        img
+            margin-bottom: 20px
+    &.widget_categories, &.widget-posts
+        .widget-content
+            ul li
+                margin-bottom: 8px
+                span
+                    margin-left: 10px
+    &.widget_posts
+        .widget-content
+            .widget-post
+                display: flex
+                margin-bottom: 15px
+                &:last-child
+                    margin-bottom: 0
+                .widget-thumb
+                    width: 80px
+                    height: 80px
+                    margin-right: 15px
+                .widget-meta-title
+                    width: calc(100% - 40px)
+                    .w-meta, .w-title
+                        display: block
+                        width: 100%
+                    .w-meta
+                        font-size: 14px
+                        margin-bottom: 8px
+                    .w-title
+                        @extend .josefin
+                        line-height: 1.2
+                        color: #222222
+                        &:hover
+                            @extend .yellow
+// Service Widgets
+.service-list-widget
+    @extend .faq-tab-btn
+    li:hover a 
+        @extend .yellow
+.service-button-widget
+    a
+        display: block
+        padding: 20px 20px 20px 60px
+        @extend .posrel
+        background-color: #222
+        color: #ffffff !important
+        margin-bottom: 15px
+        &:last-child
+            margin-bottom: 0
+        i
+            @extend .posabs
+            @extend .white
+            top: 25px
+            left: 25px
+
+//Footer widgets
+.site-footer
+    .widget
+        .widget-title
+            margin-bottom: 27px
+        .widget-content
+            padding-right: 10px
+            a 
+                line-height: 2
+                &:hover
+                    @extend .yellow
+            p
+                line-height: 2
+            .widget-inner-social
+                margin-top: 8px
+                margin-bottom: -5px
+                a
+                    margin: 0px 14px
+                    @extend .fz-18
+                    &:first-child
+                        margin-left: 0
+            .contact-info-text
+                display: flex
+                .icon
+                    margin-right: 15px
+                    margin-top: 7.5px
+                    i
+                        font-size: 22px
+            .info-icons
+                li 
+                    padding-left: 30px
+                    position: relative
+                    i
+                        position: absolute
+                        left: 0
+                        top: 2px
+                        line-height: 2

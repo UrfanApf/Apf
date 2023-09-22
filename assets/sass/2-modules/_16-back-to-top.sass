@@ -1,0 +1,22 @@
+.back-to-top
+  height: 40px
+  width: 40px
+  position: fixed
+  bottom: 0px
+  right: 40px
+  cursor: pointer
+  visibility: hidden
+  opacity: 0
+  z-index: -99
+  -webkit-transition: 0.5s ease-in-out
+  transition: 0.5s ease-in-out
+  @extend .bg-black
+  @extend .white
+  &:hover
+    color: #222222
+    @extend .bg-yellow
+  &.show
+    z-index: 99
+    opacity: 1
+    visibility: visible
+    bottom: 40px

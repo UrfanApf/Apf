@@ -1,0 +1,100 @@
+.owl-carousel
+    .owl-dots
+        position: absolute
+        top: calc(100% + 17px)
+        margin-left: 38px
+        @extend .bold
+        +tab
+            top: calc(100% + 19px)
+            +mobileMd
+                display: none
+                visibility: hidden
+        .owl-dot
+            height: 38px 
+            width: 38px
+            margin-right: 5px
+            border-radius: 50%
+            @extend .posrel
+            @extend .josefin
+            span
+                width: 0
+                @extend .trans-3
+            &.active
+                margin-right: 50px
+                @extend .posrel
+                span
+                    content: ""
+                    @extend .posabs 
+                    top: 50%
+                    transform: translateY(-50%)
+                    left: 100%
+                    width: 50px
+                    height: 2px
+                    @extend .bg-yellow
+    .owl-nav
+        position: absolute
+        top: calc(100% + 15px)
+        +mobileMd
+            left: 50%
+            transform: translateX(-50%)
+            .owl-next
+                margin-left: 0 !important
+        .owl-prev, .owl-next
+            width: 38px
+            height: 38px
+            line-height: 38px
+            text-align: center 
+            @extend .josefin
+            i
+                font-weight: bold !important
+
+
+    &.banner-slider
+        .owl-dots, .owl-nav
+            z-index: 9
+            top: 50%
+            transform: translateY(-50%) rotate(-270deg)
+            transform-origin: center
+            left: -62px
+            +ml
+                display: none
+            .owl-dot
+                color: #fff
+                transform: rotate(-90deg)
+                span
+                    height: 0
+                    width: 2px
+                &.active
+                    span
+                        left: 50%
+                        transform: translateX(-50%)
+                        top: 100%
+                        height: 50px
+                        width: 2px
+            .owl-prev, .owl-next
+                color:#fff
+    &.nav-left-right
+        .owl-nav
+            position: static
+            +mobileMd
+                position: relative
+            .owl-prev, .owl-next
+                @extend .posabs
+                top: 50%
+                transform: translateY(-50%)
+                +mobileMd
+                    top: calc(50% - 8px)
+            .owl-prev
+                left: -38px
+                +mobileMd
+                    left: calc(50% - 50px)
+            .owl-next
+                right: -38px
+                +mobileMd
+                    right: calc(50% - 50px)
+    &.project-details-slider
+        +mobileMd
+            margin-bottom: 30px
+            .owl-nav
+                .owl-prev, .owl-next
+                    top: calc(50% + 15px)
